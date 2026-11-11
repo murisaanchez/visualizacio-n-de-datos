@@ -1,0 +1,30 @@
+/* Cambia colores y tipografías aquí */
+:root{
+  --bg:#07070a; --fg:#f2f2f0; --mut:#8a8a92;
+  --e1:#5ad1ff; /* E1 celeste */
+  --e3:#ff5fb0; /* E3 rosado */
+  --e4:#4be08a; /* E4 verde */
+  --display:'Space Grotesk',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--display)}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:0 7vw}
+.eb{font:500 12px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+h1{font-weight:700;font-size:clamp(48px,10vw,128px);line-height:.95;letter-spacing:-.03em;margin:10px 0 24px}
+.lead{max-width:30em;font-size:clamp(17px,2vw,22px);color:#cfcfd4;line-height:1.5}
+.hint{font:400 12px var(--mono);color:var(--mut);margin-top:40px}
+.stage{display:flex;flex-direction:column;align-items:center;gap:12vh;padding:8vh 3vw 6vh}
+.fig{position:relative;margin:0;width:min(94vw,880px)}
+canvas{display:block;width:100%;aspect-ratio:1/1;touch-action:none}
+figcaption{display:flex;flex-direction:column;gap:2px;text-align:center;font:400 13px/1.5 var(--mono);color:var(--mut);padding:0 8%;margin-top:6px}
+figcaption b{font:700 30px var(--display);letter-spacing:-.02em}
+.tip small{color:var(--mut)}
+.tip{position:absolute;pointer-events:none;background:#15151ae6;border:1px solid #2a2a33;border-radius:10px;padding:10px 12px;font:400 12px/1.5 var(--mono);color:var(--fg);width:max-content;max-width:240px;z-index:2}
+.legend{display:flex;flex-wrap:wrap;gap:10px 26px;padding:26px 7vw 60px;font:400 12px var(--mono);color:var(--mut);align-items:center}
+.legend p{flex-basis:100%;max-width:60em;margin:10px 0 0;line-height:1.6}
+.legend i{display:inline-block;vertical-align:-2px;margin-right:8px}
+.sw{width:12px;height:12px;border-radius:50%}
+.b{width:12px;height:12px;border-radius:50%;border:1.5px solid #aaa}
+.d{width:4px;height:4px;border-radius:50%;background:#aaa;margin:0 12px 0 4px!important}
+.p{width:22px;height:12px;background:linear-gradient(90deg,transparent 0 30%,#aaa 30% 36%,transparent 36%) center/100% 100% no-repeat;border-bottom:1px solid #666;vertical-align:-1px!important}

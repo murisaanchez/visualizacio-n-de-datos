@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plaza Sotomayor · La espera y el desborde</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <p class="eb">Visualización de datos · Chile</p>
+  <!-- TÍTULO PROVISORIO: cámbialo cuando definas tu pregunta -->
+  <h1>La espera<br>y el desborde</h1>
+  <p class="lead">Plaza Sotomayor, Valparaíso. Tres esquinas, diez salidas a terreno, diez minutos cada vez.</p>
+  <p class="hint">Baja ↓</p>
+</header>
+
+<main class="stage">
+  <figure class="fig" data-e="E1"><canvas aria-label="Esquina E1"></canvas><div class="tip" hidden></div>
+    <figcaption><b style="color:var(--e1)">E1</b><span>Señalética de parada, sin paradero físico. Vereda angosta.</span></figcaption></figure>
+  <figure class="fig" data-e="E3"><canvas aria-label="Esquina E3"></canvas><div class="tip" hidden></div>
+    <figcaption><b style="color:var(--e3)">E3</b><span>Sin señalética ni paradero. Aglomeración de gente esperando.</span></figcaption></figure>
+  <figure class="fig" data-e="E4"><canvas aria-label="Esquina E4"></canvas><div class="tip" hidden></div>
+    <figcaption><b style="color:var(--e4)">E4</b><span>Sin señalética ni paradero. Mucha aglomeración, espera tranquila.</span></figcaption></figure>
+</main>
+
+<footer class="legend">
+  <span><i class="b"></i>burbuja: una persona esperando la micro</span>
+  <span><i class="d"></i>punto que camina: un peatón</span>
+  <span><i class="p"></i>pico de latido: una micro que pasa</span>
+  <p>Cada figura es una esquina. Cada anillo es una salida a terreno (10 en total) y cada porción, un minuto. La línea de cada anillo late cada vez que pasó una micro: más micros, más latidos. Cada tema salió en fechas distintas, por eso la salida 4 de peatones y la salida 4 de transporte no ocurrieron el mismo día: las fechas aparecen al pasar el cursor. Las observaciones no fueron simultáneas entre esquinas ni entre temas: se muestran juntas para comparar patrones, no momentos. Toca o pasa el cursor sobre las burbujas.</p>
+</footer>
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
