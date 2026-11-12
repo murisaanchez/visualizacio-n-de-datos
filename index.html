@@ -3,34 +3,59 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Plaza Sotomayor · La espera y el desborde</title>
+<title>Pulso y límite · Plaza Sotomayor</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="hero">
-  <p class="eb">Visualización de datos · Chile</p>
-  <!-- TÍTULO PROVISORIO: cámbialo cuando definas tu pregunta -->
-  <h1>La espera<br>y el desborde</h1>
-  <p class="lead">Plaza Sotomayor, Valparaíso. Tres esquinas, diez salidas a terreno, diez minutos cada vez.</p>
-  <p class="hint">Baja ↓</p>
+
+<header class="sec hero">
+  <p class="eb">Visualización de datos · Plaza Sotomayor, Valparaíso · Chile</p>
+  <h1>PULSO<br>Y LÍMITE</h1>
+  <p class="lead">La saturación invisible en la infraestructura de las esquinas</p>
+  <svg class="ecg" viewBox="0 0 600 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40H190l8-4 8 4h20l10-34 12 66 10-32h14l8-10 8 10H600"/></svg>
+  <p class="hint">Desplázate ↓</p>
 </header>
 
-<main class="stage">
-  <figure class="fig" data-e="E1"><canvas aria-label="Esquina E1"></canvas><div class="tip" hidden></div>
-    <figcaption><b style="color:var(--e1)">E1</b><span>Señalética de parada, sin paradero físico. Vereda angosta.</span></figcaption></figure>
-  <figure class="fig" data-e="E3"><canvas aria-label="Esquina E3"></canvas><div class="tip" hidden></div>
-    <figcaption><b style="color:var(--e3)">E3</b><span>Sin señalética ni paradero. Aglomeración de gente esperando.</span></figcaption></figure>
-  <figure class="fig" data-e="E4"><canvas aria-label="Esquina E4"></canvas><div class="tip" hidden></div>
-    <figcaption><b style="color:var(--e4)">E4</b><span>Sin señalética ni paradero. Mucha aglomeración, espera tranquila.</span></figcaption></figure>
-</main>
+<section class="sec">
+  <div class="txt">
+    <p class="eb">01 · La ciudad en cifras</p>
+    <p class="big">La ciudad se mide a menudo en grandes cifras, en flujos macroscópicos que cruzan las calles bajo una aparente neutralidad. Sin embargo, la fricción real de lo urbano ocurre en los detalles: en los espacios de una vereda, en la espera bajo el sol y en el instante preciso en que la infraestructura de una esquina colapsa frente al ritmo del transporte y flujo peatonal.</p>
+    <p class="big">Este proyecto no busca presentar un gráfico estadístico convencional ni dictar una solución absoluta. Su propósito es traducir el pulso intermitente de la Plaza Sotomayor en un sistema visual orgánico. A través de la programación, los registros en terreno de tres esquinas clave con paradero (E1, E3 y E4) se transforman en nodos y anillos temporales; un modelo abstracto donde cada burbuja de acumulación evidencia el momento exacto en que la esquina llega a su punto límite, saturando el espacio de espera y revelando la fragilidad de los bordes urbanos.</p>
+  </div>
+</section>
 
-<footer class="legend">
-  <span><i class="b"></i>burbuja: una persona esperando la micro</span>
-  <span><i class="d"></i>punto que camina: un peatón</span>
-  <span><i class="p"></i>pico de latido: una micro que pasa</span>
-  <p>Cada figura es una esquina. Cada anillo es una salida a terreno (10 en total) y cada porción, un minuto. La línea de cada anillo late cada vez que pasó una micro: más micros, más latidos. Cada tema salió en fechas distintas, por eso la salida 4 de peatones y la salida 4 de transporte no ocurrieron el mismo día: las fechas aparecen al pasar el cursor. Las observaciones no fueron simultáneas entre esquinas ni entre temas: se muestran juntas para comparar patrones, no momentos. Toca o pasa el cursor sobre las burbujas.</p>
-</footer>
+<section class="sec">
+  <div class="txt wide">
+    <p class="eb">02 · Cómo llegamos a estos datos</p>
+    <h2>Observamos la plaza, minuto a minuto</h2>
+    <p class="big">Entre octubre y noviembre de 2026, nuestro grupo salió a terreno a observar seis esquinas de Plaza Sotomayor. En cada salida registramos una esquina durante 10 minutos, con una fila de datos por minuto, y repetimos las salidas hasta diez veces. Todas las esquinas se registraron con las mismas planillas y definiciones, para poder compararlas.</p>
+    <div class="themes">
+      <div><span class="n">01</span><b>Peatones</b><p>Cuántas personas cruzaron una línea de conteo, en qué dirección, y cuántas se detuvieron.</p></div>
+      <div><span class="n">02</span><b>Micros</b><p>Cuántas micros pasaron, cuántas personas esperaban al final de cada minuto y cuántas subieron.</p></div>
+      <div><span class="n">03</span><b>Vehicular</b><p>Cuántos vehículos pasaron (particulares, taxis, micros y otros) y cómo cruzaron las personas la calle.</p></div>
+    </div>
+    <p class="sm">Esta visualización cruza los registros de peatones y micros de las esquinas E1, E3 y E4.</p>
+  </div>
+</section>
+
+<section class="sec viz">
+  <div class="vh"><b>PULSO Y LÍMITE</b><span>Pasa el cursor o toca las burbujas · al tocar un minuto aparecen sus datos y las fechas de cada salida</span></div>
+  <div class="row">
+    <figure class="fig" data-e="E1"><canvas aria-label="Esquina E1"></canvas><div class="tip" hidden></div><figcaption><b style="color:var(--e1)">E1</b> señalética de parada, vereda angosta</figcaption></figure>
+    <figure class="fig" data-e="E3"><canvas aria-label="Esquina E3"></canvas><div class="tip" hidden></div><figcaption><b style="color:var(--e3)">E3</b> sin paradero, aglomeración</figcaption></figure>
+    <figure class="fig" data-e="E4"><canvas aria-label="Esquina E4"></canvas><div class="tip" hidden></div><figcaption><b style="color:var(--e4)">E4</b> sin paradero, mucha aglomeración</figcaption></figure>
+  </div>
+  <dl class="leg">
+    <div><dt>Anillo</dt><dd>una salida a terreno (S1 a S10)</dd></div>
+    <div><dt>División</dt><dd>un minuto de observación (1 a 10 min)</dd></div>
+    <div><dt>Burbuja</dt><dd>una persona esperando la micro</dd></div>
+    <div><dt>Latido</dt><dd>una micro que pasa</dd></div>
+    <div><dt>Punto</dt><dd>un peatón que cruza</dd></div>
+  </dl>
+  <p class="sm foot">Las observaciones no fueron simultáneas entre esquinas ni entre temas: se muestran juntas para comparar patrones, no momentos.</p>
+</section>
+
 <script src="data.js"></script>
 <script src="script.js"></script>
 </body>
